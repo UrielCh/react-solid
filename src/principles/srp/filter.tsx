@@ -1,9 +1,9 @@
-import { useState } from "react";
 import { Rating } from "react-simple-star-rating";
+import { IProduct } from "./hooks/useProducts";
 
-export function filterProducts(products: any[], rate: number) {
+export function filterProducts(products: IProduct[], rate: number) {
   return products.filter(
-    (product: any) => product.rating.rate > rate
+    (product: IProduct) => product.rating.rate > rate
   );
 }
 
